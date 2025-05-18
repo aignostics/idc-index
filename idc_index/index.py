@@ -383,6 +383,7 @@ class IDCClient:
                 [
                     self.s5cmdPath,
                     "--no-sign-request",
+                    "--no-verify-ssl",
                     "cp",
                     idc_clinical_data_release_url,
                     self.clinical_data_dir,
@@ -665,6 +666,7 @@ class IDCClient:
                 "--endpoint-url",
                 endpoint,
                 "--no-sign-request",
+                "--no-verify-ssl",
                 "ls",
                 s3_url,
             ],
@@ -1082,6 +1084,7 @@ class IDCClient:
                     cmd = [
                         self.s5cmdPath,
                         "--no-sign-request",
+                        "--no-verify-ssl",
                         "--endpoint-url",
                         gcp_endpoint_url,
                         "ls",
@@ -1414,6 +1417,7 @@ class IDCClient:
             dry_run_cmd = [
                 self.s5cmdPath,
                 "--no-sign-request",
+                "--no-verify-ssl",
                 "--dry-run",
                 "--endpoint-url",
                 endpoint_to_use,
@@ -1446,6 +1450,7 @@ evaluate what to download and corresponding size with only series level precisio
                 cmd = [
                     self.s5cmdPath,
                     "--no-sign-request",
+                    "--no-verify-ssl",
                     "--endpoint-url",
                     endpoint_to_use,
                     "run",
@@ -1495,6 +1500,7 @@ Destination folder is not empty and sync size is less than total size.
             cmd = [
                 self.s5cmdPath,
                 "--no-sign-request",
+                "--no-verify-ssl",
                 "--endpoint-url",
                 endpoint_to_use,
                 "run",
