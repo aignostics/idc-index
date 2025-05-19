@@ -28,7 +28,8 @@ asset_endpoint_url = f"https://github.com/ImagingDataCommons/idc-index-data/rele
 logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
+# TODO(Helmut): Clean solution for no-verify-ssl
+ 
 class IDCClient:
     # Default download hierarchy template
     DOWNLOAD_HIERARCHY_DEFAULT = (
